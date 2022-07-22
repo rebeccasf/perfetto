@@ -261,6 +261,17 @@ config("default") {
         "-msse4.2",
       ]
     }
+  } else if (target_cpu == "riscv64") {
+    cflags += [
+      "-march=rv64gc",
+      "-mabi=lp64d",
+      "-mno-relax",
+      "--target=riscv64-linux-gnu",
+    ]
+    ldflags += [
+      "-mno-relax",
+      "--target=riscv64-linux-gnu",
+    ]
   }
 
   if (is_linux) {
