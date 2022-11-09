@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+#pragma clang diagnostic ignored "-Wunused-private-field"
 #include "src/trace_processor/importers/proto/packet_sequence_state.h"
 
 namespace perfetto {
